@@ -1,0 +1,229 @@
+@import "../variables.scss";
+@import "../common.scss";
+
+#main-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  #sidebar {
+    background-color: #fff;
+  }
+  #section {
+    header {
+      background-color: #fff;
+      padding: 16px 40px;
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        form {
+          flex-grow: 1;
+          max-width: 928px;
+          display: flex;
+          align-items: center;
+          background-color: #f7f8fa;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          transition: 0.2s ease-in-out;
+          input {
+            flex-grow: 1;
+            border: none;
+            height: 24px;
+            &:focus {
+              &::placeholder {
+                opacity: 0;
+              }
+            }
+            &::placeholder {
+              font-size: 1rem;
+              color: #4b5b6c;
+              transition: 0.1s ease-in-out;
+            }
+          }
+          .search-svg {
+            padding: 16px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .search-exit {
+            margin-left: auto;
+            margin-right: 23px;
+            margin-left: 10px;
+            display: none;
+            width: 24px;
+            height: 24px;
+          }
+        }
+        form.active {
+          border: 1px solid #2496ff;
+          .search-exit {
+            display: inline-block !important;
+          }
+        }
+        .arrow-icon {
+          width: 24px;
+          height: 24px;
+        }
+        .user-lang {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          > div {
+            > div:first-child {
+              cursor: pointer;
+            }
+          }
+          .user-drop,
+          .language-drop {
+            position: absolute;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #f7f8fa;
+            top: calc(100% + 8px);
+            right: 0;
+            width: 276px;
+            padding: 24px;
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 0px 8px 40px rgba(53, 78, 91, 0.24);
+            li {
+              padding: 16px 0;
+              border-bottom: 1px solid #e5e7ec;
+              display: inline-flex;
+              justify-content: flex-start;
+              a {
+                // transition: 0.1s ease-in-out;
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 14px;
+                color: $cl-26;
+                text-decoration: none;
+                gap: 16px;
+                &:hover {
+                  color: $cl-blue;
+                  svg {
+                    path {
+                      stroke: $cl-blue;
+                    }
+                  }
+                }
+                small {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+            li:first-child {
+              padding-top: 0;
+            }
+            li:last-child {
+              padding-bottom: 0;
+              border-bottom: none;
+            }
+          }
+          .user {
+            position: relative;
+            .user-static {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+              span.user-img {
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  object-position: center;
+                }
+              }
+              > div {
+                display: inline-flex;
+                flex-direction: column;
+                gap: 8px;
+                > small {
+                  font-size: 14px;
+                  color: $cl-84;
+                }
+                > span {
+                  font-size: 1rem;
+                  font-family: $firagoMedium;
+                  color: $cl-26;
+                }
+              }
+            }
+            .user-drop {
+            }
+          }
+          .language {
+            position: relative;
+            .language-static {
+              background: #ffffff;
+              border: 1px solid #e5e7ec;
+              border-radius: 10px;
+              padding: 12px;
+              color: $cl-26;
+              display: inline-flex;
+              align-items: center;
+              gap: 16px;
+              .lang-symbol {
+                width: 32px;
+                height: 32px;
+                background: #2496ff;
+                border-radius: 6px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                  max-width: 16px;
+                  max-height: 16px;
+                }
+              }
+            }
+            .language-drop {
+              a {
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                div {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 16px;
+                  img {
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+              }
+            }
+            .active-lang {
+              a {
+                color: $cl-blue;
+              }
+            }
+          }
+        }
+        .user-lang > div.active {
+          .user-drop,
+          .language-drop {
+            display: flex !important;
+          }
+          .arrow-icon {
+            transform: rotateZ(-90deg) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+#sidebar {
+  > a {
+    font-family: $poppins;
+  }
+}

@@ -30,7 +30,9 @@ input {
     font-family: "FiraGO Book"; }
 
 button {
-  border: none; }
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
 
 p {
   color: #130f26; }
@@ -74,7 +76,8 @@ p {
             color: #4b5b6c;
             transition: 0.1s ease-in-out; }
         #main-container #section header > div form .search-svg {
-          padding: 16px; }
+          padding: 16px;
+          cursor: pointer; }
           #main-container #section header > div form .search-svg svg {
             width: 24px;
             height: 24px; }
@@ -84,7 +87,8 @@ p {
           margin-left: 10px;
           display: none;
           width: 24px;
-          height: 24px; }
+          height: 24px;
+          cursor: pointer; }
       #main-container #section header > div form.active {
         border: 1px solid #2496ff; }
         #main-container #section header > div form.active .search-exit {
@@ -211,7 +215,446 @@ p {
       #main-container #section header > div .user-lang > div.active .arrow-icon {
         transform: rotateZ(-90deg) !important; }
 
-#sidebar > a {
-  font-family: Poppins; }
+#sidebar {
+  align-self: flex-start; }
+  #sidebar .logo-list {
+    padding: 32px 40px; }
+    #sidebar .logo-list .company-logo {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #121c42;
+      font-family: Poppins;
+      margin-bottom: 80px; }
+    #sidebar .logo-list ul {
+      display: flex;
+      flex-direction: column;
+      gap: 32px; }
+      #sidebar .logo-list ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #sidebar .logo-list ul li a {
+          color: #130f26;
+          font-family: "FiraGO Regular";
+          text-decoration: none;
+          font-size: 1rem;
+          display: inline-flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 16px; }
+          #sidebar .logo-list ul li a:hover {
+            color: #2496ff; }
+            #sidebar .logo-list ul li a:hover svg path,
+            #sidebar .logo-list ul li a:hover svg circle {
+              stroke: #2496ff; }
+        #sidebar .logo-list ul li > span {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: #2496ff;
+          color: #fff;
+          font-family: "Poppins-Medium";
+          font-weight: 500; }
+    #sidebar .logo-list > div {
+      margin-bottom: 240px;
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px; }
+      #sidebar .logo-list > div > small {
+        font-family: "FiraGO Bold";
+        font-size: 1rem; }
+  #sidebar .dark-light-mode {
+    padding: 32px 40px 52px;
+    border-top: 1px solid #eceef5;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #sidebar .dark-light-mode > div {
+      border: 1px solid #f7f8fa;
+      border-radius: 100px;
+      overflow: hidden; }
+      #sidebar .dark-light-mode > div button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        padding: 12px 16px;
+        font-family: "FiraGO Book";
+        font-weight: 350; }
+        #sidebar .dark-light-mode > div button svg {
+          width: 24px;
+          height: 24px; }
+      #sidebar .dark-light-mode > div .dark {
+        color: #627384;
+        background-color: #f7f8fa; }
+        #sidebar .dark-light-mode > div .dark:hover {
+          color: #130f26; }
+          #sidebar .dark-light-mode > div .dark:hover svg path {
+            fill: #130f26; }
+        #sidebar .dark-light-mode > div .dark svg path {
+          fill: #627384; }
+      #sidebar .dark-light-mode > div .light {
+        color: #2496ff;
+        background-color: #fff; }
+        #sidebar .dark-light-mode > div .light svg path {
+          fill: #2496ff; }
+
+.balance-wiget-transaction {
+  display: grid;
+  grid-template-columns: 1fr 608px;
+  padding: 40px;
+  grid-gap: 24px; }
+  .balance-wiget-transaction .balance-widget .balance-section {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; }
+    .balance-wiget-transaction .balance-widget .balance-section .overall-balance {
+      padding: 32px;
+      border-bottom: 4px solid #f7f8fa; }
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h1,
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h2,
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h3,
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h4,
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h5,
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h6 {
+        font-size: 24px;
+        color: #130f26;
+        font-family: "FiraGO Bold"; }
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        border-bottom: 1px solid #e5e7ec;
+        padding-bottom: 32px; }
+        .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .btn-icon {
+          padding: 16px 24px 16px 16px; }
+        .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance {
+          display: flex;
+          flex-direction: column;
+          gap: 20px; }
+          .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency {
+            color: #130f26; }
+            .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency > span {
+              font-size: 48px;
+              font-family: "FiraGO Medium"; }
+            .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency > small {
+              font-size: 24px;
+              font-family: "FiraGO Book";
+              font-weight: 350; }
+          .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px; }
+            .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency > div > span {
+              font-size: 16px;
+              font-family: "FiraGO Medium"; }
+            .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency > div > small {
+              font-size: 12px;
+              font-family: "FiraGO Book";
+              margin-left: 3px;
+              color: #627384; }
+      .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num {
+        padding-top: 32px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px; }
+        .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          align-self: center; }
+          .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div > span {
+            color: #627384;
+            font-size: 14px;
+            font-family: "FiraGO Book"; }
+          .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div > div {
+            color: #130f26;
+            font-size: 1rem;
+            font-family: "FiraGO Medium";
+            font-weight: 500; }
+        .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num .copy-svg {
+          width: 24px;
+          height: 24px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          align-self: flex-end;
+          margin-bottom: 6px;
+          cursor: pointer; }
+          .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num .copy-svg svg {
+            width: 100%;
+            height: 100%; }
+    .balance-wiget-transaction .balance-widget .balance-section .payment-methods {
+      padding: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap; }
+      .balance-wiget-transaction .balance-widget .balance-section .payment-methods button {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 16px;
+        padding: 16px;
+        gap: 16px;
+        border-radius: 10px;
+        transition: 0.1s ease-in-out; }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span {
+          background-color: #fff; }
+      .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot {
+        position: relative; }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot::after {
+          content: "";
+          position: absolute;
+          background: #f83737;
+          border: 4px solid #fff;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          right: -7px;
+          top: -6px; }
+      .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(1) {
+        background-color: #e9f7f0; }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(1):hover {
+          background-color: #dcf4e8; }
+      .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(2) {
+        background-color: #e7f8fd; }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(2):hover {
+          background-color: #def1f6; }
+      .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(3) {
+        background-color: #f0edfe; }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(3):hover {
+          background-color: #e5e1fb; }
+  .balance-wiget-transaction .balance-widget .widget-section {
+    display: flex;
+    flex-direction: column; }
+    .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0 16px 0; }
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h1,
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h2,
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h3,
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h4,
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h5,
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h6 {
+        font-size: 1rem;
+        font-family: "FiraGO Bold"; }
+      .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows .slider-arrows {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center; }
+        .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows .slider-arrows button {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%; }
+          .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows .slider-arrows button svg {
+            width: 24px;
+            height: 24px; }
+        .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows .slider-arrows .left-slide svg {
+          transform: rotateZ(180deg); }
+    .balance-wiget-transaction .balance-widget .widget-section > .btn-icon {
+      margin-top: 24px;
+      padding: 16px 16px 16px 24px;
+      align-self: center; }
+    .balance-wiget-transaction .balance-widget .widget-section .widget-slider {
+      display: flex;
+      flex-wrap: wrap; }
+      .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item {
+        background-color: #fff;
+        padding: 32px 32px 56px 32px;
+        border-radius: 12px;
+        min-width: 298px; }
+        .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > span {
+          width: 104px;
+          height: 104px;
+          border-radius: 50%;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 32px; }
+          .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > span img {
+            height: 48px; }
+        .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .bluish {
+          background-color: #d2daff; }
+        .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .reddish {
+          background-color: #ffd7ca; }
+        .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .yellowish {
+          background-color: #fff3d2; }
+        .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div {
+          display: flex;
+          flex-direction: column; }
+          .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #130f26;
+            font-weight: 350; }
+            .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > a svg {
+              width: 24px;
+              height: 24px; }
+          .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div {
+            display: inline-flex;
+            gap: 8px; }
+            .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div > span {
+              font-family: "FiraGO Medium";
+              font-size: 40px; }
+            .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div small {
+              align-self: flex-end;
+              margin-bottom: 7px;
+              font-size: 1rem; }
+          .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > span {
+            font-size: 14px;
+            color: #2496ff; }
+          .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div .red {
+            color: #f83737 !important; }
+  .balance-wiget-transaction .transaction {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; }
+    .balance-wiget-transaction .transaction > h1,
+    .balance-wiget-transaction .transaction > h2,
+    .balance-wiget-transaction .transaction > h3,
+    .balance-wiget-transaction .transaction > h4,
+    .balance-wiget-transaction .transaction > h5,
+    .balance-wiget-transaction .transaction > h6 {
+      font-size: 24px;
+      font-family: "FiraGO Bold"; }
+    .balance-wiget-transaction .transaction .transaction-history {
+      display: flex;
+      flex-direction: column;
+      gap: 24px; }
+      .balance-wiget-transaction .transaction .transaction-history .tr-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px; }
+        .balance-wiget-transaction .transaction .transaction-history .tr-row .tr-date {
+          color: #627384;
+          font-size: 12px;
+          font-family: "FiraGO Book";
+          font-weight: 350; }
+        .balance-wiget-transaction .transaction .transaction-history .tr-row > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 16px; }
+          .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            flex-grow: 1;
+            overflow: hidden; }
+            .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info > div {
+              font-size: 16px;
+              color: #130f26;
+              font-family: "FiraGO Regular";
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info > p {
+              color: #627384;
+              font-size: 14px;
+              line-height: 17px;
+              font-family: "FiraGO Book";
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+          .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant {
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-end; }
+            .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant > span {
+              font-family: "FiraGO Medium";
+              color: #130f26; }
+            .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant small {
+              color: #627384;
+              font-size: 12px;
+              margin-left: 3px;
+              margin-top: -2px; }
+    .balance-wiget-transaction .transaction > button {
+      align-self: center;
+      padding: 16px 16px 16px 24px; }
+
+.btn-icon {
+  border: 1px solid #e5e7ec;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-family: "FiraGO Regular";
+  color: #130f26; }
+  .btn-icon:hover {
+    background-color: #dceeff;
+    color: #2496ff; }
+    .btn-icon:hover svg path {
+      stroke: #2496ff; }
+  .btn-icon span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px; }
+
+.squar-el {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; }
+  .squar-el svg {
+    width: 24px;
+    height: 24px; }
+  .squar-el img {
+    right: -12px;
+    bottom: -12px;
+    position: absolute;
+    border-radius: 50%; }
+
+.tr-icon,
+.account-svg {
+  background: #f7f8fa; }
+
+.copied {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  border-radius: 30px;
+  transform: translate(-50%, 100%);
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: 0.1s ease-in-out; }
+  .copied input {
+    display: none; }
+
+.copied.active {
+  transform: translate(-50%, -50%) !important; }
 
 /*# sourceMappingURL=main.css.map */

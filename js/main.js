@@ -30,6 +30,33 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // copy to clipboard
+  function copyToClipBoard() {
+    // Get the text field
+    const copyText = document.getElementById("copied-input");
+    copyText.value = accNumber.textContent;
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+  }
+  function copiedMessage() {
+    copiedPop.classList.add("active");
+    setTimeout(() => {
+      copyBtn.disabled = false;
+      copiedPop.classList.remove("active");
+    }, 1000);
+  }
+  const copiedPop = document.querySelector(".copied");
+  const copyBtn = document.querySelector(".copy-svg");
+  const accNumber = document.querySelector(".acc-nm");
+  copyBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    e.currentTarget.disabled = true;
+    copyToClipBoard();
+    copiedMessage();
+  });
   // header form events
   const headerForm = document.querySelector("header form");
   const headerInput = document.querySelector("header form input");

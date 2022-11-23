@@ -6,6 +6,8 @@ $firagoMedium: "FiraGO Medium";
 $firagoBold: "FiraGO Bold";
 $helvetica: "Helvetica";
 $poppins: Poppins;
+$poppinsLight: Poppins-Light;
+$poppinsMedium: "Poppins-Medium";
 // colors
 // for light mode
 
@@ -28,6 +30,10 @@ $btn-dark: #273a4a;
 $bg-phone: #e9f7f0; // (light mode hover #DCF4E8) (dark mode #A6E0C4 + dark mode hover #86D7B0)
 $bg-wallet: #e7f8fd; // (light mode hover #DEF1F6) (dark mode #A0E1FA + dark mode hover #80D6F8)
 $bg-reload: #f0edfe; // (light mode hover #E5E1FB) (dark mode #C3B5FC + dark mode hover #B3A2F8)
+//light mode hovers for widgets
+$bg-phone-lg-hover: #dcf4e8;
+$bg-wallet-lg-hover: #def1f6;
+$bg-reload-lg-hover: #e5e1fb;
 $bg-boxes: #ffffff; // for dark mode #1C1C1E
 // triple wiget for light mode
 $bg-wiget1: #d2daff; // changes to #95A2E2

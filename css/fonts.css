@@ -1,7 +1,99 @@
-@font-face{font-family:"FiraGO Book";src:url("fonts/FiraGO-Book.eot");src:url("fonts/FiraGO-Book.eot?#iefix") format("embedded-opentype"),url("fonts/FiraGO-Book.woff2") format("woff2"),url("fonts/FiraGO-Book.woff") format("woff"),url("fonts/FiraGO-Book.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'FiraGO Regular';src:url('fonts/FiraGO-Regular.eot');src:url('fonts/FiraGO-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/FiraGO-Regular.woff2') format('woff2'),url('fonts/FiraGO-Regular.woff') format('woff'),url('fonts/FiraGO-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'FiraGO Light';src:url('fonts/FiraGO-Light.eot');src:url('fonts/FiraGO-Light.eot?#iefix') format('embedded-opentype'),url('fonts/FiraGO-Light.woff2') format('woff2'),url('fonts/FiraGO-Light.woff') format('woff'),url('fonts/FiraGO-Light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:'FiraGO Medium';src:url('fonts/FiraGO-Medium.eot');src:url('fonts/FiraGO-Medium.eot?#iefix') format('embedded-opentype'),url('fonts/FiraGO-Medium.woff2') format('woff2'),url('fonts/FiraGO-Medium.woff') format('woff'),url('fonts/FiraGO-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'FiraGO Bold';src:url('fonts/FiraGO-Bold.eot');src:url('fonts/FiraGO-Bold.eot?#iefix') format('embedded-opentype'),url('fonts/FiraGO-Bold.woff2') format('woff2'),url('fonts/FiraGO-Bold.woff') format('woff'),url('fonts/FiraGO-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:Helvetica;src:url('fonts/Helvetica.eot');src:url('fonts/Helvetica.eot?#iefix') format('embedded-opentype'),url('fonts/Helvetica.woff2') format('woff2'),url('fonts/Helvetica.woff') format('woff'),url('fonts/Helvetica.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:Poppins;src:url('fonts/Poppins-SemiBold.eot');src:url('fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),url('fonts/Poppins-SemiBold.woff2') format('woff2'),url('fonts/Poppins-SemiBold.woff') format('woff'),url('fonts/Poppins-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face {
+  font-family: "FiraGO Book";
+  src: url("fonts/FiraGO-Book.eot");
+  src: url("fonts/FiraGO-Book.eot?#iefix") format("embedded-opentype"),
+    url("fonts/FiraGO-Book.woff2") format("woff2"),
+    url("fonts/FiraGO-Book.woff") format("woff"),
+    url("fonts/FiraGO-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraGO Regular";
+  src: url("fonts/FiraGO-Regular.eot");
+  src: url("fonts/FiraGO-Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/FiraGO-Regular.woff2") format("woff2"),
+    url("fonts/FiraGO-Regular.woff") format("woff"),
+    url("fonts/FiraGO-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraGO Light";
+  src: url("fonts/FiraGO-Light.eot");
+  src: url("fonts/FiraGO-Light.eot?#iefix") format("embedded-opentype"),
+    url("fonts/FiraGO-Light.woff2") format("woff2"),
+    url("fonts/FiraGO-Light.woff") format("woff"),
+    url("fonts/FiraGO-Light.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraGO Medium";
+  src: url("fonts/FiraGO-Medium.eot");
+  src: url("fonts/FiraGO-Medium.eot?#iefix") format("embedded-opentype"),
+    url("fonts/FiraGO-Medium.woff2") format("woff2"),
+    url("fonts/FiraGO-Medium.woff") format("woff"),
+    url("fonts/FiraGO-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraGO Bold";
+  src: url("fonts/FiraGO-Bold.eot");
+  src: url("fonts/FiraGO-Bold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/FiraGO-Bold.woff2") format("woff2"),
+    url("fonts/FiraGO-Bold.woff") format("woff"),
+    url("fonts/FiraGO-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("fonts/Helvetica.eot");
+  src: url("fonts/Helvetica.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Helvetica.woff2") format("woff2"),
+    url("fonts/Helvetica.woff") format("woff"),
+    url("fonts/Helvetica.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/Poppins-SemiBold.eot");
+  src: url("fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("fonts/Poppins-SemiBold.woff") format("woff"),
+    url("fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url("fonts/Poppins-Light.eot");
+  src: url("fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Poppins-Light.woff2") format("woff2"),
+    url("fonts/Poppins-Light.woff") format("woff"),
+    url("fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("fonts/Poppins-Medium.eot");
+  src: url("fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Poppins-Medium.woff2") format("woff2"),
+    url("fonts/Poppins-Medium.woff") format("woff"),
+    url("fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

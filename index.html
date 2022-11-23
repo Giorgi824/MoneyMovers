@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MM</title>
+    <script src="js/tiny-slider.js" defer></script>
     <script src="js/svges.js" defer></script>
     <script src="js/lazy.js" defer></script>
     <script src="js/add-svg.js" defer></script>
@@ -31,6 +32,22 @@
             <li><a href="#">კონფიგურაცია</a></li>
             <li><a href="#">გამოსვლა</a></li>
           </ul>
+          <div>
+            <small>დასათაურება</small>
+            <ul>
+              <li><a href="#">ჩათი</a><span class="total-chats">4</span></li>
+              <li>
+                <a href="#">შეტყობინება</a
+                ><span class="total-notifications">9</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dark-light-mode">
+          <div>
+            <button class="light">ღია</button>
+            <button class="dark">მუქი</button>
+          </div>
         </div>
       </aside>
       <section id="section">
@@ -106,7 +123,285 @@
             </div>
           </div>
         </header>
+        <div class="balance-wiget-transaction">
+          <div class="balance-widget">
+            <div class="balance-section">
+              <div class="overall-balance">
+                <h2>საერთო ბალანსი</h2>
+                <div class="sum-add-balance">
+                  <div class="sum-balance">
+                    <div class="native-currency">
+                      <span class="nat-cur">1437.45</span><small>₾</small>
+                    </div>
+                    <div class="foreign-currency">
+                      <div class="foreign-eur">
+                        <span class="fr-cur">512.8256</span><small>€</small>
+                      </div>
+                      <div class="foreign-rub">
+                        <span class="fr-cur">31661.2003</span><small>₽</small>
+                      </div>
+                      <div class="foreign-dollar">
+                        <span class="fr-cur">524.4063</span><small>$</small>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-icon">
+                    <span class="plus-icon"></span>შევსება
+                  </button>
+                </div>
+                <div class="account-num">
+                  <span class="account-svg squar-el walletSvg"></span>
+                  <div>
+                    <span>ანგარიშის ნომერი</span>
+                    <div class="acc-nm">GE29NB0000000101904917</div>
+                  </div>
+                  <button class="copy-svg"></button>
+                </div>
+              </div>
+              <div class="payment-methods">
+                <button>
+                  <span class="squar-el phoneSvg"></span
+                  ><small>მობ.შევსება</small>
+                </button>
+                <button class="red-dot">
+                  <span class="squar-el walletSvg"></span
+                  ><small>მობ.შევსება</small>
+                </button>
+                <button>
+                  <span class="squar-el reloadSvg"></span
+                  ><small>მობ.შევსება</small>
+                </button>
+              </div>
+            </div>
+            <div class="widget-section">
+              <div class="title-and-arrows">
+                <h3>ვიჯეტები</h3>
+                <div class="slider-arrows">
+                  <button class="btn-icon left-slide">
+                    <span class="arrow-icon"></span>
+                  </button>
+                  <button class="btn-icon right-slide">
+                    <span class="arrow-icon"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="widget-slider">
+                <div class="widget-slider-item">
+                  <span class="bluish"
+                    ><img src="img/widget1.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >ამანათები <span class="squar-el infoSvg"></span
+                    ></a>
+                    <div><span>14</span><small>ამანათები</small></div>
+                    <span class="red">live</span>
+                  </div>
+                </div>
+                <div class="widget-slider-item">
+                  <span class="reddish"
+                    ><img src="img/widget2.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >სერვისები<span class="squar-el infoSvg"></span
+                    ></a>
+                    <div><span>17</span><small>სერვისები</small></div>
+                    <span class="blue">24 ფასიანი</span>
+                  </div>
+                </div>
+                <div class="widget-slider-item">
+                  <span class="yellowish"
+                    ><img src="img/widget3.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >ფინანსები<span class="squar-el infoSvg"></span
+                    ></a>
+                    <div>
+                      <span>14.45 <small>₾</small></span
+                      ><small>აქტიური</small>
+                    </div>
+                    <span>მეორე ხარისხოვანი ინფო</span>
+                  </div>
+                </div>
+                <div class="widget-slider-item">
+                  <span class="bluish"
+                    ><img src="img/widget1.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >ამანათები <span class="squar-el infoSvg"></span
+                    ></a>
+                    <div><span>14</span><small>ამანათები</small></div>
+                    <span class="red">live</span>
+                  </div>
+                </div>
+                <div class="widget-slider-item">
+                  <span class="reddish"
+                    ><img src="img/widget2.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >სერვისები<span class="squar-el infoSvg"></span
+                    ></a>
+                    <div><span>17</span><small>სერვისები</small></div>
+                    <span class="blue">24 ფასიანი</span>
+                  </div>
+                </div>
+                <div class="widget-slider-item">
+                  <span class="yellowish"
+                    ><img src="img/widget3.png" alt="shipping image"
+                  /></span>
+                  <div>
+                    <a href="#"
+                      >ფინანსები<span class="squar-el infoSvg"></span
+                    ></a>
+                    <div>
+                      <span>14.45 <small>₾</small></span
+                      ><small>აქტიური</small>
+                    </div>
+                    <span>მეორე ხარისხოვანი ინფო</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-icon">
+                ყველა ვიჯეტი<span class="arrow-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div class="transaction">
+            <h1>ბოლო ტრანზაქციები</h1>
+            <div class="transaction-history">
+              <div class="tr-row">
+                <small class="tr-date">27 მაისი, 2022</small>
+                <div>
+                  <span class="tr-icon squar-el convertSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია</div>
+                    <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს...</p>
+                  </div>
+                  <div class="tr-quant"><span>14.45</span><small>₾</small></div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el usersSvg"
+                    ><img data-src="img/user2.png" alt=""
+                  /></span>
+                  <div class="tr-info">
+                    <div>თანხის გადარიცხვა ფიზიკ...</div>
+                    <p>წინასწარ განსაზღვრული ტექსტის ნაგლეჯს იმეორებე...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>460.00</span><small>₾</small>
+                  </div>
+                </div>
+              </div>
+              <div class="tr-row">
+                <small class="tr-date">27 მაისი, 2022</small>
+                <div>
+                  <span class="tr-icon squar-el operationSvg"></span>
+                  <div class="tr-info">
+                    <div>საკომისიო ოპერაცია</div>
+                    <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
+                  </div>
+                  <div class="tr-quant"><span>14.45</span><small>₾</small></div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია გადახდა</div>
+                    <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>-1.00</span> <small>$</small>
+                  </div>
+                </div>
+              </div>
+              <div class="tr-row">
+                <small class="tr-date">27 მაისი, 2022</small>
+                <div>
+                  <span class="tr-icon squar-el operationSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია</div>
+                    <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს ...</p>
+                  </div>
+                  <div class="tr-quant"><span>14.45</span><small>₾</small></div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el usersSvg"
+                    ><img data-src="img/user3.png" alt=""
+                  /></span>
+                  <div class="tr-info">
+                    <div>თანხის გადარიცხვა ფიზიკ...</div>
+                    <p>წინასწარ განსაზღვრული ტექსტის ნაგლეჯს იმეორებე...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>460.00</span><small>₾</small>
+                  </div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია გადახდა</div>
+                    <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>-1.00</span> <small>$</small>
+                  </div>
+                </div>
+              </div>
+              <div class="tr-row">
+                <small class="tr-date">27 მაისი, 2022</small>
+                <div>
+                  <span class="tr-icon squar-el operationSvg"></span>
+                  <div class="tr-info">
+                    <div>საკომისიო ოპერაცია</div>
+                    <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
+                  </div>
+                  <div class="tr-quant"><span>14.45</span><small>₾</small></div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია გადახდა</div>
+                    <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>-1.00</span> <small>$</small>
+                  </div>
+                </div>
+              </div>
+              <div class="tr-row">
+                <small class="tr-date">27 მაისი, 2022</small>
+                <div>
+                  <span class="tr-icon squar-el operationSvg"></span>
+                  <div class="tr-info">
+                    <div>საკომისიო ოპერაცია</div>
+                    <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
+                  </div>
+                  <div class="tr-quant"><span>14.45</span><small>₾</small></div>
+                </div>
+                <div>
+                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <div class="tr-info">
+                    <div>კონვერტაცია გადახდა</div>
+                    <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
+                  </div>
+                  <div class="tr-quant">
+                    <span>-1.00</span> <small>$</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-icon">
+              ნახე მეტი <span class="arrow-icon"></span>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
+    <span class="copied"
+      >copied to clipboard <input type="text" id="copied-input"
+    /></span>
   </body>
 </html>

@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener("DOMContentLoaded", function () {
   // select account balance elements to append wallet and copy svges
   const accountWallet = document.querySelector(".account-svg");

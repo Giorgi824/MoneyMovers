@@ -10,8 +10,10 @@
     <script src="js/lazy.js" defer></script>
     <script src="js/add-svg.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/mode.js" defer></script>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/tiny-slider.css" />
     <link rel="stylesheet" href="css/main.scss/main.css" />
   </head>
   <body>
@@ -45,8 +47,12 @@
         </div>
         <div class="dark-light-mode">
           <div>
-            <button class="light">ღია</button>
-            <button class="dark">მუქი</button>
+            <button class="light" role="mode switch" arial-label="light mode">
+              ღია
+            </button>
+            <button class="dark" role="mode switch" arial-label="dark mode">
+              მუქი
+            </button>
           </div>
         </div>
       </aside>
@@ -186,82 +192,94 @@
                 </div>
               </div>
               <div class="widget-slider">
-                <div class="widget-slider-item">
-                  <span class="bluish"
-                    ><img src="img/widget1.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >ამანათები <span class="squar-el infoSvg"></span
-                    ></a>
-                    <div><span>14</span><small>ამანათები</small></div>
-                    <span class="red">live</span>
-                  </div>
-                </div>
-                <div class="widget-slider-item">
-                  <span class="reddish"
-                    ><img src="img/widget2.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >სერვისები<span class="squar-el infoSvg"></span
-                    ></a>
-                    <div><span>17</span><small>სერვისები</small></div>
-                    <span class="blue">24 ფასიანი</span>
-                  </div>
-                </div>
-                <div class="widget-slider-item">
-                  <span class="yellowish"
-                    ><img src="img/widget3.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >ფინანსები<span class="squar-el infoSvg"></span
-                    ></a>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="bluish"
+                      ><img src="img/widget1.png" alt="shipping image"
+                    /></span>
                     <div>
-                      <span>14.45 <small>₾</small></span
-                      ><small>აქტიური</small>
+                      <a href="#"
+                        >ამანათები <span class="squar-el infoSvg"></span
+                      ></a>
+                      <div><span>14</span><small>ამანათები</small></div>
+                      <span class="red">live</span>
                     </div>
-                    <span>მეორე ხარისხოვანი ინფო</span>
                   </div>
                 </div>
-                <div class="widget-slider-item">
-                  <span class="bluish"
-                    ><img src="img/widget1.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >ამანათები <span class="squar-el infoSvg"></span
-                    ></a>
-                    <div><span>14</span><small>ამანათები</small></div>
-                    <span class="red">live</span>
-                  </div>
-                </div>
-                <div class="widget-slider-item">
-                  <span class="reddish"
-                    ><img src="img/widget2.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >სერვისები<span class="squar-el infoSvg"></span
-                    ></a>
-                    <div><span>17</span><small>სერვისები</small></div>
-                    <span class="blue">24 ფასიანი</span>
-                  </div>
-                </div>
-                <div class="widget-slider-item">
-                  <span class="yellowish"
-                    ><img src="img/widget3.png" alt="shipping image"
-                  /></span>
-                  <div>
-                    <a href="#"
-                      >ფინანსები<span class="squar-el infoSvg"></span
-                    ></a>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="reddish"
+                      ><img src="img/widget2.png" alt="shipping image"
+                    /></span>
                     <div>
-                      <span>14.45 <small>₾</small></span
-                      ><small>აქტიური</small>
+                      <a href="#"
+                        >სერვისები<span class="squar-el infoSvg"></span
+                      ></a>
+                      <div><span>17</span><small>სერვისები</small></div>
+                      <span class="blue">24 ფასიანი</span>
                     </div>
-                    <span>მეორე ხარისხოვანი ინფო</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="yellowish"
+                      ><img src="img/widget3.png" alt="shipping image"
+                    /></span>
+                    <div>
+                      <a href="#"
+                        >ფინანსები<span class="squar-el infoSvg"></span
+                      ></a>
+                      <div>
+                        <span>14.45 <small>₾</small></span
+                        ><small>აქტიური</small>
+                      </div>
+                      <span>მეორე ხარისხოვანი ინფო</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="bluish"
+                      ><img src="img/widget1.png" alt="shipping image"
+                    /></span>
+                    <div>
+                      <a href="#"
+                        >ამანათები <span class="squar-el infoSvg"></span
+                      ></a>
+                      <div><span>14</span><small>ამანათები</small></div>
+                      <span class="red">live</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="reddish"
+                      ><img src="img/widget2.png" alt="shipping image"
+                    /></span>
+                    <div>
+                      <a href="#"
+                        >სერვისები<span class="squar-el infoSvg"></span
+                      ></a>
+                      <div><span>17</span><small>სერვისები</small></div>
+                      <span class="blue">24 ფასიანი</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="widget-slider-item">
+                    <span class="yellowish"
+                      ><img src="img/widget3.png" alt="shipping image"
+                    /></span>
+                    <div>
+                      <a href="#"
+                        >ფინანსები<span class="squar-el infoSvg"></span
+                      ></a>
+                      <div>
+                        <span>14.45 <small>₾</small></span
+                        ><small>აქტიური</small>
+                      </div>
+                      <span>მეორე ხარისხოვანი ინფო</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -403,5 +421,6 @@
     <span class="copied"
       >copied to clipboard <input type="text" id="copied-input"
     /></span>
+    <button class="chat-fixed"><img data-src="img/chat.svg" alt="" /></button>
   </body>
 </html>

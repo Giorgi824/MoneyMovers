@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener("DOMContentLoaded", () => {
   const removeElClass = function (select = ".active", remove = "active") {
     const actives = document.querySelectorAll(select);
@@ -69,5 +70,31 @@ window.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
     headerInput.value = "";
     headerForm.classList.remove("active");
+  });
+  // slider
+  const slider = tns({
+    container: ".widget-slider",
+    items: 3,
+    gutter: 16,
+    slideBy: 1,
+    controlsPosition: "bottom",
+    navPosition: "bottom",
+    mouseDrag: true,
+    autoplay: false,
+    autoplayButtonOutput: false,
+    controlsContainer: ".slider-arrows",
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      768: {
+        items: 2,
+        nav: true,
+      },
+      1440: {
+        items: 3,
+      },
+    },
   });
 });

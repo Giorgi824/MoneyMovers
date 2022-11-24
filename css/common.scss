@@ -2,14 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  background-color: $bg-fa;
-  font-family: $firagoBook;
+  background-color: var(--body-bg-f5);
+  font-family: var(--firagoBook);
 }
 ul,
 ol {
@@ -27,7 +30,7 @@ input {
   background-color: transparent;
   outline: none;
   &::placeholder {
-    font-family: $firagoBook;
+    font-family: var(--firagoBook);
   }
 }
 button {
@@ -35,8 +38,12 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-p {
-  color: $cl-26;
+.arrow-icon {
+  svg {
+    path {
+      stroke: var(--ff-26);
+    }
+  }
 }
 .arrow-icon-down {
   transform: rotateZ(90deg);

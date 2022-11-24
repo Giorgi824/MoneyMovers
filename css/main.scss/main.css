@@ -1,15 +1,22 @@
+@import url(../variables.css);
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */ }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  background-color: #f7f8fa;
-  font-family: "FiraGO Book"; }
+  background-color: var(--body-bg-f5);
+  font-family: var(--firagoBook); }
 
 ul,
 ol {
@@ -27,15 +34,15 @@ input {
   background-color: transparent;
   outline: none; }
   input::placeholder {
-    font-family: "FiraGO Book"; }
+    font-family: var(--firagoBook); }
 
 button {
   border: none;
   background-color: transparent;
   cursor: pointer; }
 
-p {
-  color: #130f26; }
+.arrow-icon svg path {
+  stroke: var(--ff-26); }
 
 .arrow-icon-down {
   transform: rotateZ(90deg); }
@@ -47,9 +54,9 @@ p {
   display: grid;
   grid-template-columns: 280px 1fr; }
   #main-container #sidebar {
-    background-color: #fff; }
+    background-color: var(--bg-container); }
   #main-container #section header {
-    background-color: #fff;
+    background-color: var(--bg-container);
     padding: 16px 40px; }
     #main-container #section header > div {
       display: flex;
@@ -61,19 +68,21 @@ p {
         max-width: 928px;
         display: flex;
         align-items: center;
-        background-color: #f7f8fa;
+        background-color: var(--fa-1e);
         border-radius: 12px;
         border: 1px solid transparent;
         transition: 0.2s ease-in-out; }
         #main-container #section header > div form input {
           flex-grow: 1;
           border: none;
-          height: 24px; }
+          height: 24px;
+          color: var(--cl-input);
+          font-size: 1rem; }
           #main-container #section header > div form input:focus::placeholder {
             opacity: 0; }
           #main-container #section header > div form input::placeholder {
             font-size: 1rem;
-            color: #4b5b6c;
+            color: var(--cl-input);
             transition: 0.1s ease-in-out; }
         #main-container #section header > div form .search-svg {
           padding: 16px;
@@ -81,6 +90,9 @@ p {
           #main-container #section header > div form .search-svg svg {
             width: 24px;
             height: 24px; }
+            #main-container #section header > div form .search-svg svg path,
+            #main-container #section header > div form .search-svg svg circle {
+              stroke: var(--sr-info); }
         #main-container #section header > div form .search-exit {
           margin-left: auto;
           margin-right: 23px;
@@ -93,6 +105,8 @@ p {
         border: 1px solid #2496ff; }
         #main-container #section header > div form.active .search-exit {
           display: inline-block !important; }
+          #main-container #section header > div form.active .search-exit svg path {
+            stroke: var(--ff-26); }
       #main-container #section header > div .arrow-icon {
         width: 24px;
         height: 24px; }
@@ -106,8 +120,8 @@ p {
         #main-container #section header > div .user-lang .language-drop {
           position: absolute;
           border-radius: 8px;
-          background-color: #fff;
-          border: 1px solid #f7f8fa;
+          background-color: var(--bg-dropdown);
+          border: var(--border-width) solid #f7f8fa;
           top: calc(100% + 8px);
           right: 0;
           width: 276px;
@@ -115,11 +129,11 @@ p {
           display: none;
           flex-direction: column;
           gap: 16px;
-          box-shadow: 0px 8px 40px rgba(53, 78, 91, 0.24); }
+          box-shadow: var(--box-shadow); }
           #main-container #section header > div .user-lang .user-drop li,
           #main-container #section header > div .user-lang .language-drop li {
             padding: 16px 0;
-            border-bottom: 1px solid #e5e7ec;
+            border-bottom: 1px solid var(--user-lang);
             display: inline-flex;
             justify-content: flex-start; }
             #main-container #section header > div .user-lang .user-drop li a,
@@ -128,15 +142,18 @@ p {
               align-items: center;
               justify-content: flex-start;
               font-size: 14px;
-              color: #130f26;
+              color: var(--ff-26);
               text-decoration: none;
               gap: 16px; }
+              #main-container #section header > div .user-lang .user-drop li a svg path,
+              #main-container #section header > div .user-lang .language-drop li a svg path {
+                stroke: var(--ff-26); }
               #main-container #section header > div .user-lang .user-drop li a:hover,
               #main-container #section header > div .user-lang .language-drop li a:hover {
-                color: #2496ff; }
+                color: var(--cl-blue); }
                 #main-container #section header > div .user-lang .user-drop li a:hover svg path,
                 #main-container #section header > div .user-lang .language-drop li a:hover svg path {
-                  stroke: #2496ff; }
+                  stroke: var(--cl-blue); }
               #main-container #section header > div .user-lang .user-drop li a small,
               #main-container #section header > div .user-lang .language-drop li a small {
                 width: 24px;
@@ -169,19 +186,18 @@ p {
               gap: 8px; }
               #main-container #section header > div .user-lang .user .user-static > div > small {
                 font-size: 14px;
-                color: #627384; }
+                color: var(--cl-84); }
               #main-container #section header > div .user-lang .user .user-static > div > span {
                 font-size: 1rem;
-                font-family: "FiraGO Medium";
-                color: #130f26; }
+                font-family: var(--firagoMedium);
+                color: var(--ff-26); }
         #main-container #section header > div .user-lang .language {
           position: relative; }
           #main-container #section header > div .user-lang .language .language-static {
-            background: #ffffff;
-            border: 1px solid #e5e7ec;
+            border: 1px solid var(--cl-border);
             border-radius: 10px;
             padding: 12px;
-            color: #130f26;
+            color: var(--ff-26);
             display: inline-flex;
             align-items: center;
             gap: 16px; }
@@ -208,7 +224,7 @@ p {
                 width: 24px;
                 height: 24px; }
           #main-container #section header > div .user-lang .language .active-lang a {
-            color: #2496ff; }
+            color: var(--cl-blue); }
       #main-container #section header > div .user-lang > div.active .user-drop,
       #main-container #section header > div .user-lang > div.active .language-drop {
         display: flex !important; }
@@ -226,8 +242,8 @@ p {
       gap: 8px;
       text-decoration: none;
       font-size: 1rem;
-      color: #121c42;
-      font-family: Poppins;
+      color: var(--cl-mod-42);
+      font-family: var(--poppins);
       margin-bottom: 80px; }
     #sidebar .logo-list ul {
       display: flex;
@@ -238,19 +254,22 @@ p {
         justify-content: space-between;
         align-items: center; }
         #sidebar .logo-list ul li a {
-          color: #130f26;
-          font-family: "FiraGO Regular";
+          color: var(--ff-26);
+          font-family: var(--firagoRegular);
           text-decoration: none;
           font-size: 1rem;
           display: inline-flex;
           justify-content: flex-start;
           align-items: center;
           gap: 16px; }
+          #sidebar .logo-list ul li a svg path,
+          #sidebar .logo-list ul li a svg circle {
+            stroke: var(--ff-26); }
           #sidebar .logo-list ul li a:hover {
-            color: #2496ff; }
+            color: var(--cl-blue); }
             #sidebar .logo-list ul li a:hover svg path,
             #sidebar .logo-list ul li a:hover svg circle {
-              stroke: #2496ff; }
+              stroke: var(--cl-blue); }
         #sidebar .logo-list ul li > span {
           display: inline-flex;
           justify-content: center;
@@ -259,9 +278,9 @@ p {
           width: 24px;
           height: 24px;
           border-radius: 50%;
-          background-color: #2496ff;
+          background-color: var(--cl-blue);
           color: #fff;
-          font-family: "Poppins-Medium";
+          font-family: var(--poppinsMedium);
           font-weight: 500; }
     #sidebar .logo-list > div {
       margin-bottom: 240px;
@@ -270,18 +289,20 @@ p {
       flex-direction: column;
       gap: 24px; }
       #sidebar .logo-list > div > small {
-        font-family: "FiraGO Bold";
-        font-size: 1rem; }
+        font-family: var(--firagoBold);
+        font-size: 1rem;
+        color: var(--ff-26); }
   #sidebar .dark-light-mode {
     padding: 32px 40px 52px;
-    border-top: 1px solid #eceef5;
+    border-top: 1px solid var(--aside-border);
     display: flex;
     justify-content: center;
     align-items: center; }
     #sidebar .dark-light-mode > div {
-      border: 1px solid #f7f8fa;
+      border: 1px solid var(--mode-balance-border);
       border-radius: 100px;
-      overflow: hidden; }
+      overflow: hidden;
+      display: inline-flex; }
       #sidebar .dark-light-mode > div button {
         display: inline-flex;
         justify-content: center;
@@ -289,25 +310,29 @@ p {
         gap: 8px;
         font-size: 1rem;
         padding: 12px 16px;
-        font-family: "FiraGO Book";
+        font-family: var(--firagoBook);
         font-weight: 350; }
         #sidebar .dark-light-mode > div button svg {
           width: 24px;
           height: 24px; }
       #sidebar .dark-light-mode > div .dark {
-        color: #627384;
-        background-color: #f7f8fa; }
+        color: var(--cl-moon);
+        background-color: var(--gray-box); }
         #sidebar .dark-light-mode > div .dark:hover {
-          color: #130f26; }
+          color: var(--cl-hover-moon); }
           #sidebar .dark-light-mode > div .dark:hover svg path {
-            fill: #130f26; }
+            fill: var(--cl-hover-moon); }
         #sidebar .dark-light-mode > div .dark svg path {
-          fill: #627384; }
+          fill: var(--cl-moon); }
       #sidebar .dark-light-mode > div .light {
-        color: #2496ff;
-        background-color: #fff; }
+        color: var(--cl-sun);
+        background-color: var(--white-black); }
+        #sidebar .dark-light-mode > div .light:hover {
+          color: var(--cl-hover-sun); }
+          #sidebar .dark-light-mode > div .light:hover svg path {
+            fill: var(--cl-hover-sun); }
         #sidebar .dark-light-mode > div .light svg path {
-          fill: #2496ff; }
+          fill: var(--cl-sun); }
 
 .balance-wiget-transaction {
   display: grid;
@@ -315,12 +340,12 @@ p {
   padding: 40px;
   grid-gap: 24px; }
   .balance-wiget-transaction .balance-widget .balance-section {
-    background-color: #fff;
+    background-color: var(--bg-container);
     border-radius: 12px;
     overflow: hidden; }
     .balance-wiget-transaction .balance-widget .balance-section .overall-balance {
       padding: 32px;
-      border-bottom: 4px solid #f7f8fa; }
+      border-bottom: 4px solid var(--mode-balance-border); }
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h1,
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h2,
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h3,
@@ -328,14 +353,14 @@ p {
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h5,
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance > h6 {
         font-size: 24px;
-        color: #130f26;
-        font-family: "FiraGO Bold"; }
+        color: var(--ff-26);
+        font-family: var(--firagoBold); }
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 24px;
-        border-bottom: 1px solid #e5e7ec;
+        border-bottom: 1px solid var(--cl-border);
         padding-bottom: 32px; }
         .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .btn-icon {
           padding: 16px 24px 16px 16px; }
@@ -344,13 +369,13 @@ p {
           flex-direction: column;
           gap: 20px; }
           .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency {
-            color: #130f26; }
+            color: var(--ff-26); }
             .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency > span {
               font-size: 48px;
-              font-family: "FiraGO Medium"; }
+              font-family: var(--firagoMedium); }
             .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .native-currency > small {
               font-size: 24px;
-              font-family: "FiraGO Book";
+              font-family: var(--firagoBook);
               font-weight: 350; }
           .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency {
             display: flex;
@@ -358,30 +383,33 @@ p {
             gap: 24px; }
             .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency > div > span {
               font-size: 16px;
-              font-family: "FiraGO Medium"; }
+              font-family: var(--firagoMedium);
+              color: var(--ff-26); }
             .balance-wiget-transaction .balance-widget .balance-section .overall-balance .sum-add-balance .sum-balance .foreign-currency > div > small {
               font-size: 12px;
-              font-family: "FiraGO Book";
+              font-family: var(--firagoBook);
               margin-left: 3px;
-              color: #627384; }
+              color: var(--cl-84); }
       .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num {
         padding-top: 32px;
         display: flex;
         justify-content: flex-start;
         gap: 16px; }
+        .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > span svg path {
+          stroke: var(--ff-26); }
         .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div {
           display: flex;
           flex-direction: column;
           gap: 8px;
           align-self: center; }
           .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div > span {
-            color: #627384;
+            color: var(--cl-84);
             font-size: 14px;
-            font-family: "FiraGO Book"; }
+            font-family: var(--firagoBook); }
           .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num > div > div {
-            color: #130f26;
+            color: var(--ff-26);
             font-size: 1rem;
-            font-family: "FiraGO Medium";
+            font-family: var(--firagoMedium);
             font-weight: 500; }
         .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num .copy-svg {
           width: 24px;
@@ -395,6 +423,8 @@ p {
           .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num .copy-svg svg {
             width: 100%;
             height: 100%; }
+            .balance-wiget-transaction .balance-widget .balance-section .overall-balance .account-num .copy-svg svg path {
+              stroke: var(--copy-icon); }
     .balance-wiget-transaction .balance-widget .balance-section .payment-methods {
       padding: 32px;
       display: flex;
@@ -411,31 +441,34 @@ p {
         border-radius: 10px;
         transition: 0.1s ease-in-out; }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span {
-          background-color: #fff; }
+          background-color: var(--white-black); }
+          .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span svg path,
+          .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span svg circle {
+            stroke: var(--ff-26); }
       .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot {
         position: relative; }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot::after {
           content: "";
           position: absolute;
-          background: #f83737;
-          border: 4px solid #fff;
+          background: var(--cl-red);
+          border: 4px solid var(--circle-border);
           width: 16px;
           height: 16px;
           border-radius: 50%;
           right: -7px;
           top: -6px; }
       .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(1) {
-        background-color: #e9f7f0; }
+        background-color: var(--bg-phone); }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(1):hover {
-          background-color: #dcf4e8; }
+          background-color: var(--bg-hover-phone); }
       .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(2) {
-        background-color: #e7f8fd; }
+        background-color: var(--bg-wallet); }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(2):hover {
-          background-color: #def1f6; }
+          background-color: var(--bg-hover-wallet); }
       .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(3) {
-        background-color: #f0edfe; }
+        background-color: var(--bg-reload); }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods button:nth-child(3):hover {
-          background-color: #e5e1fb; }
+          background-color: var(--bg-hover-reload); }
   .balance-wiget-transaction .balance-widget .widget-section {
     display: flex;
     flex-direction: column; }
@@ -451,7 +484,8 @@ p {
       .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h5,
       .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows > h6 {
         font-size: 1rem;
-        font-family: "FiraGO Bold"; }
+        font-family: var(--firagoBold);
+        color: var(--ff-26); }
       .balance-wiget-transaction .balance-widget .widget-section .title-and-arrows .slider-arrows {
         display: inline-flex;
         gap: 8px;
@@ -476,10 +510,11 @@ p {
       display: flex;
       flex-wrap: wrap; }
       .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item {
-        background-color: #fff;
+        background-color: var(--bg-container);
         padding: 32px 32px 56px 32px;
         border-radius: 12px;
-        min-width: 298px; }
+        min-width: 298px;
+        cursor: pointer; }
         .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > span {
           width: 104px;
           height: 104px;
@@ -491,11 +526,11 @@ p {
           .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > span img {
             height: 48px; }
         .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .bluish {
-          background-color: #d2daff; }
+          background-color: var(--bg-wiget1); }
         .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .reddish {
-          background-color: #ffd7ca; }
+          background-color: var(--bg-wiget2); }
         .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item .yellowish {
-          background-color: #fff3d2; }
+          background-color: var(--bg-wiget3); }
         .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div {
           display: flex;
           flex-direction: column; }
@@ -505,28 +540,32 @@ p {
             justify-content: flex-start;
             text-decoration: none;
             font-size: 1rem;
-            color: #130f26;
+            color: var(--widget-text);
             font-weight: 350; }
             .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > a svg {
               width: 24px;
               height: 24px; }
+              .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > a svg path {
+                stroke: var(--sr-info); }
           .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div {
             display: inline-flex;
             gap: 8px; }
             .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div > span {
-              font-family: "FiraGO Medium";
-              font-size: 40px; }
+              font-family: var(--firagoMedium);
+              font-size: 40px;
+              color: var(--ff-26); }
             .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div small {
               align-self: flex-end;
               margin-bottom: 7px;
-              font-size: 1rem; }
+              font-size: 1rem;
+              color: var(--widget-text); }
           .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > span {
             font-size: 14px;
-            color: #2496ff; }
+            color: var(--cl-blue); }
           .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div .red {
-            color: #f83737 !important; }
+            color: var(--cl-red) !important; }
   .balance-wiget-transaction .transaction {
-    background: #ffffff;
+    background: var(--bg-container);
     border-radius: 12px;
     padding: 32px;
     display: flex;
@@ -539,7 +578,8 @@ p {
     .balance-wiget-transaction .transaction > h5,
     .balance-wiget-transaction .transaction > h6 {
       font-size: 24px;
-      font-family: "FiraGO Bold"; }
+      font-family: var(--firagoBold);
+      color: var(--ff-26); }
     .balance-wiget-transaction .transaction .transaction-history {
       display: flex;
       flex-direction: column;
@@ -549,15 +589,26 @@ p {
         flex-direction: column;
         gap: 16px; }
         .balance-wiget-transaction .transaction .transaction-history .tr-row .tr-date {
-          color: #627384;
+          color: var(--cl-84);
           font-size: 12px;
-          font-family: "FiraGO Book";
+          font-family: var(--firagoBook);
           font-weight: 350; }
+        .balance-wiget-transaction .transaction .transaction-history .tr-row > div:not(> div:last-child) {
+          background-color: red; }
+        .balance-wiget-transaction .transaction .transaction-history .tr-row > div {
+          border-bottom: 1px solid var(--opac-border);
+          padding-bottom: 16px; }
+        .balance-wiget-transaction .transaction .transaction-history .tr-row > div:last-child {
+          border-bottom: none;
+          padding-bottom: 0px; }
         .balance-wiget-transaction .transaction .transaction-history .tr-row > div {
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 16px; }
+          .balance-wiget-transaction .transaction .transaction-history .tr-row > div > span svg path,
+          .balance-wiget-transaction .transaction .transaction-history .tr-row > div > span svg circle {
+            stroke: var(--ff-26); }
           .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info {
             display: flex;
             flex-direction: column;
@@ -566,16 +617,16 @@ p {
             overflow: hidden; }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info > div {
               font-size: 16px;
-              color: #130f26;
-              font-family: "FiraGO Regular";
+              color: var(--ff-26);
+              font-family: var(--firagoRegular);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info > p {
-              color: #627384;
+              color: var(--cl-84);
               font-size: 14px;
               line-height: 17px;
-              font-family: "FiraGO Book";
+              font-family: var(--firagoBook);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
@@ -584,10 +635,10 @@ p {
             justify-content: center;
             align-items: flex-end; }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant > span {
-              font-family: "FiraGO Medium";
-              color: #130f26; }
+              font-family: var(--firagoMedium);
+              color: var(--ff-26); }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant small {
-              color: #627384;
+              color: var(--cl-84);
               font-size: 12px;
               margin-left: 3px;
               margin-top: -2px; }
@@ -596,20 +647,23 @@ p {
       padding: 16px 16px 16px 24px; }
 
 .btn-icon {
-  border: 1px solid #e5e7ec;
+  border: 1px solid var(--cl-border);
   border-radius: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   font-size: 16px;
-  font-family: "FiraGO Regular";
-  color: #130f26; }
+  font-family: var(--firagoRegular);
+  color: var(--ff-26); }
+  .btn-icon svg path {
+    stroke: var(--ff-26); }
   .btn-icon:hover {
-    background-color: #dceeff;
-    color: #2496ff; }
+    border: 1px solid var(--btn-hover);
+    background-color: var(--btn-hover);
+    color: var(--cl-blue); }
     .btn-icon:hover svg path {
-      stroke: #2496ff; }
+      stroke: var(--cl-blue); }
   .btn-icon span {
     display: inline-flex;
     justify-content: center;
@@ -638,23 +692,40 @@ p {
 
 .tr-icon,
 .account-svg {
-  background: #f7f8fa; }
+  background: var(--gray-box); }
 
 .copied {
   position: fixed;
   left: 50%;
   bottom: 0;
-  background-color: rgba(51, 51, 51, 0.9);
+  background-color: var(--bg-copied);
   border-radius: 30px;
   transform: translate(-50%, 100%);
   padding: 15px 35px;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--cl-copied);
   transition: 0.1s ease-in-out; }
   .copied input {
     display: none; }
 
 .copied.active {
   transform: translate(-50%, -50%) !important; }
+
+.chat-fixed {
+  background-color: var(--cl-blue);
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px rgba(68, 79, 105, 0.25); }
+  .chat-fixed img {
+    filter: invert(1);
+    width: 24px;
+    height: 24px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,15 +1,15 @@
-@import "../variables.scss";
+@import "../variables.css";
 @import "../common.scss";
 
 #main-container {
   display: grid;
   grid-template-columns: 280px 1fr;
   #sidebar {
-    background-color: #fff;
+    background-color: var(--bg-container);
   }
   #section {
     header {
-      background-color: #fff;
+      background-color: var(--bg-container);
       padding: 16px 40px;
       > div {
         display: flex;
@@ -21,7 +21,7 @@
           max-width: 928px;
           display: flex;
           align-items: center;
-          background-color: #f7f8fa;
+          background-color: var(--fa-1e);
           border-radius: 12px;
           border: 1px solid transparent;
           transition: 0.2s ease-in-out;
@@ -29,6 +29,8 @@
             flex-grow: 1;
             border: none;
             height: 24px;
+            color: var(--cl-input);
+            font-size: 1rem;
             &:focus {
               &::placeholder {
                 opacity: 0;
@@ -36,7 +38,7 @@
             }
             &::placeholder {
               font-size: 1rem;
-              color: #4b5b6c;
+              color: var(--cl-input);
               transition: 0.1s ease-in-out;
             }
           }
@@ -46,6 +48,10 @@
             svg {
               width: 24px;
               height: 24px;
+              path,
+              circle {
+                stroke: var(--sr-info);
+              }
             }
           }
           .search-exit {
@@ -62,6 +68,11 @@
           border: 1px solid #2496ff;
           .search-exit {
             display: inline-block !important;
+            svg {
+              path {
+                stroke: var(--ff-26);
+              }
+            }
           }
         }
         .arrow-icon {
@@ -81,8 +92,8 @@
           .language-drop {
             position: absolute;
             border-radius: 8px;
-            background-color: #fff;
-            border: 1px solid #f7f8fa;
+            background-color: var(--bg-dropdown);
+            border: var(--border-width) solid #f7f8fa;
             top: calc(100% + 8px);
             right: 0;
             width: 276px;
@@ -90,10 +101,10 @@
             display: none;
             flex-direction: column;
             gap: 16px;
-            box-shadow: 0px 8px 40px rgba(53, 78, 91, 0.24);
+            box-shadow: var(--box-shadow);
             li {
               padding: 16px 0;
-              border-bottom: 1px solid #e5e7ec;
+              border-bottom: 1px solid var(--user-lang);
               display: inline-flex;
               justify-content: flex-start;
               a {
@@ -102,14 +113,19 @@
                 align-items: center;
                 justify-content: flex-start;
                 font-size: 14px;
-                color: $cl-26;
+                color: var(--ff-26);
                 text-decoration: none;
                 gap: 16px;
+                svg {
+                  path {
+                    stroke: var(--ff-26);
+                  }
+                }
                 &:hover {
-                  color: $cl-blue;
+                  color: var(--cl-blue);
                   svg {
                     path {
-                      stroke: $cl-blue;
+                      stroke: var(--cl-blue);
                     }
                   }
                 }
@@ -150,26 +166,26 @@
                 gap: 8px;
                 > small {
                   font-size: 14px;
-                  color: $cl-84;
+                  color: var(--cl-84);
                 }
                 > span {
                   font-size: 1rem;
-                  font-family: $firagoMedium;
-                  color: $cl-26;
+                  font-family: var(--firagoMedium);
+                  color: var(--ff-26);
                 }
               }
             }
-            .user-drop {
-            }
+            // .user-drop {
+            // }
           }
           .language {
             position: relative;
             .language-static {
-              background: #ffffff;
-              border: 1px solid #e5e7ec;
+              // background: #ffffff;
+              border: 1px solid var(--cl-border);
               border-radius: 10px;
               padding: 12px;
-              color: $cl-26;
+              color: var(--ff-26);
               display: inline-flex;
               align-items: center;
               gap: 16px;
@@ -205,7 +221,7 @@
             }
             .active-lang {
               a {
-                color: $cl-blue;
+                color: var(--cl-blue);
               }
             }
           }
@@ -235,8 +251,8 @@
       gap: 8px;
       text-decoration: none;
       font-size: 1rem;
-      color: $cl-42;
-      font-family: $poppins;
+      color: var(--cl-mod-42);
+      font-family: var(--poppins);
       margin-bottom: 80px;
     }
     ul {
@@ -248,20 +264,26 @@
         justify-content: space-between;
         align-items: center;
         a {
-          color: $cl-26;
-          font-family: $firagoRegular;
+          color: var(--ff-26);
+          font-family: var(--firagoRegular);
           text-decoration: none;
           font-size: 1rem;
           display: inline-flex;
           justify-content: flex-start;
           align-items: center;
           gap: 16px;
+          svg {
+            path,
+            circle {
+              stroke: var(--ff-26);
+            }
+          }
           &:hover {
-            color: $cl-blue;
+            color: var(--cl-blue);
             svg {
               path,
               circle {
-                stroke: $cl-blue;
+                stroke: var(--cl-blue);
               }
             }
           }
@@ -274,9 +296,9 @@
           width: 24px;
           height: 24px;
           border-radius: 50%;
-          background-color: $cl-blue;
+          background-color: var(--cl-blue);
           color: #fff;
-          font-family: $poppinsMedium;
+          font-family: var(--poppinsMedium);
           font-weight: 500;
         }
       }
@@ -288,21 +310,23 @@
       flex-direction: column;
       gap: 24px;
       > small {
-        font-family: $firagoBold;
+        font-family: var(--firagoBold);
         font-size: 1rem;
+        color: var(--ff-26);
       }
     }
   }
   .dark-light-mode {
     padding: 32px 40px 52px;
-    border-top: 1px solid #eceef5;
+    border-top: 1px solid var(--aside-border);
     display: flex;
     justify-content: center;
     align-items: center;
     > div {
-      border: 1px solid #f7f8fa;
+      border: 1px solid var(--mode-balance-border);
       border-radius: 100px;
       overflow: hidden;
+      display: inline-flex;
       button {
         display: inline-flex;
         justify-content: center;
@@ -310,7 +334,7 @@
         gap: 8px;
         font-size: 1rem;
         padding: 12px 16px;
-        font-family: $firagoBook;
+        font-family: var(--firagoBook);
         font-weight: 350;
         svg {
           width: 24px;
@@ -318,28 +342,36 @@
         }
       }
       .dark {
-        color: #627384;
-        background-color: #f7f8fa;
+        color: var(--cl-moon);
+        background-color: var(--gray-box);
         &:hover {
-          color: $cl-26;
+          color: var(--cl-hover-moon);
           svg {
             path {
-              fill: $cl-26;
+              fill: var(--cl-hover-moon);
             }
           }
         }
         svg {
           path {
-            fill: #627384;
+            fill: var(--cl-moon);
           }
         }
       }
       .light {
-        color: $cl-blue;
-        background-color: #fff;
+        color: var(--cl-sun);
+        background-color: var(--white-black);
+        &:hover {
+          color: var(--cl-hover-sun);
+          svg {
+            path {
+              fill: var(--cl-hover-sun);
+            }
+          }
+        }
         svg {
           path {
-            fill: $cl-blue;
+            fill: var(--cl-sun);
           }
         }
       }
@@ -355,12 +387,12 @@
   grid-gap: 24px;
   .balance-widget {
     .balance-section {
-      background-color: #fff;
+      background-color: var(--bg-container);
       border-radius: 12px;
       overflow: hidden;
       .overall-balance {
         padding: 32px;
-        border-bottom: 4px solid $bg-fa;
+        border-bottom: 4px solid var(--mode-balance-border);
         > h1,
         > h2,
         > h3,
@@ -368,15 +400,15 @@
         > h5,
         > h6 {
           font-size: 24px;
-          color: $cl-26;
-          font-family: $firagoBold;
+          color: var(--ff-26);
+          font-family: var(--firagoBold);
         }
         .sum-add-balance {
           display: flex;
           justify-content: space-between;
           align-items: center;
           margin-top: 24px;
-          border-bottom: 1px solid $cl-ec;
+          border-bottom: 1px solid var(--cl-border);
           padding-bottom: 32px;
           .btn-icon {
             padding: 16px 24px 16px 16px;
@@ -386,14 +418,14 @@
             flex-direction: column;
             gap: 20px;
             .native-currency {
-              color: $cl-26;
+              color: var(--ff-26);
               > span {
                 font-size: 48px;
-                font-family: $firagoMedium;
+                font-family: var(--firagoMedium);
               }
               > small {
                 font-size: 24px;
-                font-family: $firagoBook;
+                font-family: var(--firagoBook);
                 font-weight: 350;
               }
             }
@@ -404,13 +436,14 @@
               > div {
                 > span {
                   font-size: 16px;
-                  font-family: $firagoMedium;
+                  font-family: var(--firagoMedium);
+                  color: var(--ff-26);
                 }
                 > small {
                   font-size: 12px;
-                  font-family: $firagoBook;
+                  font-family: var(--firagoBook);
                   margin-left: 3px;
-                  color: $cl-84;
+                  color: var(--cl-84);
                 }
               }
             }
@@ -421,20 +454,27 @@
           display: flex;
           justify-content: flex-start;
           gap: 16px;
+          > span {
+            svg {
+              path {
+                stroke: var(--ff-26);
+              }
+            }
+          }
           > div {
             display: flex;
             flex-direction: column;
             gap: 8px;
             align-self: center;
             > span {
-              color: $cl-84;
+              color: var(--cl-84);
               font-size: 14px;
-              font-family: $firagoBook;
+              font-family: var(--firagoBook);
             }
             > div {
-              color: $cl-26;
+              color: var(--ff-26);
               font-size: 1rem;
-              font-family: $firagoMedium;
+              font-family: var(--firagoMedium);
               font-weight: 500;
             }
           }
@@ -450,6 +490,9 @@
             svg {
               width: 100%;
               height: 100%;
+              path {
+                stroke: var(--copy-icon);
+              }
             }
           }
         }
@@ -470,7 +513,13 @@
           border-radius: 10px;
           transition: 0.1s ease-in-out;
           > span {
-            background-color: #fff;
+            background-color: var(--white-black);
+            svg {
+              path,
+              circle {
+                stroke: var(--ff-26);
+              }
+            }
           }
         }
         .red-dot {
@@ -478,8 +527,8 @@
           &::after {
             content: "";
             position: absolute;
-            background: $cl-red;
-            border: 4px solid #fff;
+            background: var(--cl-red);
+            border: 4px solid var(--circle-border);
             width: 16px;
             height: 16px;
             border-radius: 50%;
@@ -488,21 +537,21 @@
           }
         }
         button:nth-child(1) {
-          background-color: $bg-phone;
+          background-color: var(--bg-phone);
           &:hover {
-            background-color: $bg-phone-lg-hover;
+            background-color: var(--bg-hover-phone);
           }
         }
         button:nth-child(2) {
-          background-color: $bg-wallet;
+          background-color: var(--bg-wallet);
           &:hover {
-            background-color: $bg-wallet-lg-hover;
+            background-color: var(--bg-hover-wallet);
           }
         }
         button:nth-child(3) {
-          background-color: $bg-reload;
+          background-color: var(--bg-reload);
           &:hover {
-            background-color: $bg-reload-lg-hover;
+            background-color: var(--bg-hover-reload);
           }
         }
       }
@@ -522,7 +571,8 @@
         > h5,
         > h6 {
           font-size: 1rem;
-          font-family: $firagoBold;
+          font-family: var(--firagoBold);
+          color: var(--ff-26);
         }
         .slider-arrows {
           display: inline-flex;
@@ -556,10 +606,11 @@
         display: flex;
         flex-wrap: wrap;
         .widget-slider-item {
-          background-color: #fff;
+          background-color: var(--bg-container);
           padding: 32px 32px 56px 32px;
           border-radius: 12px;
           min-width: 298px;
+          cursor: pointer;
           > span {
             width: 104px;
             height: 104px;
@@ -573,13 +624,13 @@
             }
           }
           .bluish {
-            background-color: $bg-wiget1;
+            background-color: var(--bg-wiget1);
           }
           .reddish {
-            background-color: $bg-wiget2;
+            background-color: var(--bg-wiget2);
           }
           .yellowish {
-            background-color: $bg-wiget3;
+            background-color: var(--bg-wiget3);
           }
           > div {
             display: flex;
@@ -590,32 +641,37 @@
               justify-content: flex-start;
               text-decoration: none;
               font-size: 1rem;
-              color: $cl-26;
+              color: var(--widget-text);
               font-weight: 350;
               svg {
                 width: 24px;
                 height: 24px;
+                path {
+                  stroke: var(--sr-info);
+                }
               }
             }
             > div {
               display: inline-flex;
               gap: 8px;
               > span {
-                font-family: $firagoMedium;
+                font-family: var(--firagoMedium);
                 font-size: 40px;
+                color: var(--ff-26);
               }
               small {
                 align-self: flex-end;
                 margin-bottom: 7px;
                 font-size: 1rem;
+                color: var(--widget-text);
               }
             }
             > span {
               font-size: 14px;
-              color: $cl-blue;
+              color: var(--cl-blue);
             }
             .red {
-              color: $cl-red !important;
+              color: var(--cl-red) !important;
             }
           }
         }
@@ -623,7 +679,7 @@
     }
   }
   .transaction {
-    background: #ffffff;
+    background: var(--bg-container);
     border-radius: 12px;
     padding: 32px;
     display: flex;
@@ -636,7 +692,8 @@
     > h5,
     > h6 {
       font-size: 24px;
-      font-family: $firagoBold;
+      font-family: var(--firagoBold);
+      color: var(--ff-26);
     }
     .transaction-history {
       display: flex;
@@ -647,17 +704,36 @@
         flex-direction: column;
         gap: 16px;
         .tr-date {
-          color: $cl-84;
+          color: var(--cl-84);
           font-size: 12px;
-          font-family: $firagoBook;
+          font-family: var(--firagoBook);
           font-weight: 350;
+        }
+        > div:not(> div:last-child) {
+          background-color: red;
+          // border: 1px solid #e5e7ec;
+        }
+        > div {
+          border-bottom: 1px solid var(--opac-border);
+          padding-bottom: 16px;
+        }
+        > div:last-child {
+          border-bottom: none;
+          padding-bottom: 0px;
         }
         > div {
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 16px;
-
+          > span {
+            svg {
+              path,
+              circle {
+                stroke: var(--ff-26);
+              }
+            }
+          }
           .tr-info {
             display: flex;
             flex-direction: column;
@@ -666,17 +742,17 @@
             overflow: hidden;
             > div {
               font-size: 16px;
-              color: $cl-26;
-              font-family: $firagoRegular;
+              color: var(--ff-26);
+              font-family: var(--firagoRegular);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
             }
             > p {
-              color: $cl-84;
+              color: var(--cl-84);
               font-size: 14px;
               line-height: 17px;
-              font-family: $firagoBook;
+              font-family: var(--firagoBook);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -687,11 +763,11 @@
             justify-content: center;
             align-items: flex-end;
             > span {
-              font-family: $firagoMedium;
-              color: $cl-26;
+              font-family: var(--firagoMedium);
+              color: var(--ff-26);
             }
             small {
-              color: $cl-84;
+              color: var(--cl-84);
               font-size: 12px;
               margin-left: 3px;
               margin-top: -2px;
@@ -709,7 +785,7 @@
 // general btn style
 .btn-icon {
   // align-self: center;
-  border: 1px solid #e5e7ec;
+  border: 1px solid var(--cl-border);
   border-radius: 10px;
   display: inline-flex;
   justify-content: center;
@@ -717,14 +793,20 @@
   gap: 16px;
   font-size: 16px;
   // padding: 16px 16px 16px 24px;
-  font-family: $firagoRegular;
-  color: $cl-26;
+  font-family: var(--firagoRegular);
+  color: var(--ff-26);
+  svg {
+    path {
+      stroke: var(--ff-26);
+    }
+  }
   &:hover {
-    background-color: $btn-light;
-    color: $cl-blue;
+    border: 1px solid var(--btn-hover);
+    background-color: var(--btn-hover);
+    color: var(--cl-blue);
     svg {
       path {
-        stroke: $cl-blue;
+        stroke: var(--cl-blue);
       }
     }
   }
@@ -761,19 +843,19 @@
 }
 .tr-icon,
 .account-svg {
-  background: #f7f8fa;
+  background: var(--gray-box);
 }
 
 .copied {
   position: fixed;
   left: 50%;
   bottom: 0;
-  background-color: rgba(51, 51, 51, 0.9);
+  background-color: var(--bg-copied);
   border-radius: 30px;
   transform: translate(-50%, 100%);
   padding: 15px 35px;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--cl-copied);
   transition: 0.1s ease-in-out;
   input {
     display: none;
@@ -781,4 +863,23 @@
 }
 .copied.active {
   transform: translate(-50%, -50%) !important;
+}
+
+.chat-fixed {
+  background-color: var(--cl-blue);
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px rgba(68, 79, 105, 0.25);
+  img {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+  }
 }

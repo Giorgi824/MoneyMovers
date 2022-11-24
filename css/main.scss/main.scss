@@ -40,6 +40,7 @@
               font-size: 1rem;
               color: var(--cl-input);
               transition: 0.1s ease-in-out;
+              font-family: var(--firagoBook);
             }
           }
           .search-svg {
@@ -252,8 +253,10 @@
       text-decoration: none;
       font-size: 1rem;
       color: var(--cl-mod-42);
-      font-family: var(--poppins);
       margin-bottom: 80px;
+      span {
+        font-family: var(--poppins);
+      }
     }
     ul {
       display: flex;
@@ -265,7 +268,7 @@
         align-items: center;
         a {
           color: var(--ff-26);
-          font-family: var(--firagoRegular);
+          // font-family: var(--firagoBook);
           text-decoration: none;
           font-size: 1rem;
           display: inline-flex;
@@ -521,6 +524,9 @@
               }
             }
           }
+          small {
+            font-size: 16px;
+          }
         }
         .red-dot {
           position: relative;
@@ -658,10 +664,18 @@
                 font-family: var(--firagoMedium);
                 font-size: 40px;
                 color: var(--ff-26);
+                display: inline-flex;
+                gap: 3px;
+                > small {
+                  color: var(--cl-84);
+                  align-self: flex-end;
+                  margin-bottom: 7px;
+                  font-size: 1rem;
+                }
               }
-              small {
+              > small {
                 align-self: flex-end;
-                margin-bottom: 7px;
+                margin-bottom: 10px;
                 font-size: 1rem;
                 color: var(--widget-text);
               }
@@ -734,6 +748,14 @@
               }
             }
           }
+          .bulbSvg {
+            svg {
+              path:nth-child(2) {
+                stroke: none !important;
+                fill: var(--ff-26);
+              }
+            }
+          }
           .tr-info {
             display: flex;
             flex-direction: column;
@@ -743,7 +765,7 @@
             > div {
               font-size: 16px;
               color: var(--ff-26);
-              font-family: var(--firagoRegular);
+              font-family: var(--firagoBook);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -765,6 +787,7 @@
             > span {
               font-family: var(--firagoMedium);
               color: var(--ff-26);
+              font-size: 16px;
             }
             small {
               color: var(--cl-84);
@@ -793,7 +816,7 @@
   gap: 16px;
   font-size: 16px;
   // padding: 16px 16px 16px 24px;
-  font-family: var(--firagoRegular);
+  // font-family: var(--firagoBook);
   color: var(--ff-26);
   svg {
     path {

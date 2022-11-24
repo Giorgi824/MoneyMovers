@@ -8,15 +8,15 @@
   -ms-user-select: none;
   /* IE 10 and IE 11 */
   user-select: none;
-  /* Standard syntax */ }
+  /* Standard syntax */
+  font-family: var(--firagoBook); }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  background-color: var(--body-bg-f5);
-  font-family: var(--firagoBook); }
+  background-color: var(--body-bg-f5); }
 
 ul,
 ol {
@@ -83,7 +83,8 @@ button {
           #main-container #section header > div form input::placeholder {
             font-size: 1rem;
             color: var(--cl-input);
-            transition: 0.1s ease-in-out; }
+            transition: 0.1s ease-in-out;
+            font-family: var(--firagoBook); }
         #main-container #section header > div form .search-svg {
           padding: 16px;
           cursor: pointer; }
@@ -243,8 +244,9 @@ button {
       text-decoration: none;
       font-size: 1rem;
       color: var(--cl-mod-42);
-      font-family: var(--poppins);
       margin-bottom: 80px; }
+      #sidebar .logo-list .company-logo span {
+        font-family: var(--poppins); }
     #sidebar .logo-list ul {
       display: flex;
       flex-direction: column;
@@ -255,7 +257,6 @@ button {
         align-items: center; }
         #sidebar .logo-list ul li a {
           color: var(--ff-26);
-          font-family: var(--firagoRegular);
           text-decoration: none;
           font-size: 1rem;
           display: inline-flex;
@@ -445,6 +446,8 @@ button {
           .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span svg path,
           .balance-wiget-transaction .balance-widget .balance-section .payment-methods button > span svg circle {
             stroke: var(--ff-26); }
+        .balance-wiget-transaction .balance-widget .balance-section .payment-methods button small {
+          font-size: 16px; }
       .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot {
         position: relative; }
         .balance-wiget-transaction .balance-widget .balance-section .payment-methods .red-dot::after {
@@ -553,10 +556,17 @@ button {
             .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div > span {
               font-family: var(--firagoMedium);
               font-size: 40px;
-              color: var(--ff-26); }
-            .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div small {
+              color: var(--ff-26);
+              display: inline-flex;
+              gap: 3px; }
+              .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div > span > small {
+                color: var(--cl-84);
+                align-self: flex-end;
+                margin-bottom: 7px;
+                font-size: 1rem; }
+            .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > div > small {
               align-self: flex-end;
-              margin-bottom: 7px;
+              margin-bottom: 10px;
               font-size: 1rem;
               color: var(--widget-text); }
           .balance-wiget-transaction .balance-widget .widget-section .widget-slider .widget-slider-item > div > span {
@@ -609,6 +619,9 @@ button {
           .balance-wiget-transaction .transaction .transaction-history .tr-row > div > span svg path,
           .balance-wiget-transaction .transaction .transaction-history .tr-row > div > span svg circle {
             stroke: var(--ff-26); }
+          .balance-wiget-transaction .transaction .transaction-history .tr-row > div .bulbSvg svg path:nth-child(2) {
+            stroke: none !important;
+            fill: var(--ff-26); }
           .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info {
             display: flex;
             flex-direction: column;
@@ -618,7 +631,7 @@ button {
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-info > div {
               font-size: 16px;
               color: var(--ff-26);
-              font-family: var(--firagoRegular);
+              font-family: var(--firagoBook);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis; }
@@ -636,7 +649,8 @@ button {
             align-items: flex-end; }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant > span {
               font-family: var(--firagoMedium);
-              color: var(--ff-26); }
+              color: var(--ff-26);
+              font-size: 16px; }
             .balance-wiget-transaction .transaction .transaction-history .tr-row > div .tr-quant small {
               color: var(--cl-84);
               font-size: 12px;
@@ -654,7 +668,6 @@ button {
   align-items: center;
   gap: 16px;
   font-size: 16px;
-  font-family: var(--firagoRegular);
   color: var(--ff-26); }
   .btn-icon svg path {
     stroke: var(--ff-26); }

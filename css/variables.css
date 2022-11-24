@@ -1,18 +1,15 @@
 :root {
   /* fonts */
-  --firagoBook: "FiraGO Book";
-  --firagoRegular: "FiraGO Regular";
-  --firagoLight: "FiraGO Light";
-  --firagoMedium: "FiraGO Medium";
-  --firagoBold: "FiraGO Bold";
-  --helvetica: "Helvetica";
+  --firagoBook: "Conv_FiraGO-Book";
+  --firagoMedium: "Conv_FiraGO-Medium";
+  --firagoBold: "Conv_FiraGO-Bold";
   --poppins: Poppins;
-  --poppinsLight: Poppins-Light;
   --poppinsMedium: "Poppins-Medium";
   --cl-blue: #2496ff;
   --cl-red: #f83737;
+  /* --widget-small: #627384; #81888F */
 }
-
+/* widget small text */
 @media (prefers-color-scheme: dark) {
   :root {
     --cl-mod-42: #fff;

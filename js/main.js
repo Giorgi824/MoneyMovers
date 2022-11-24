@@ -64,6 +64,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const headerFormClear = document.querySelector("header form .search-exit");
   headerForm.addEventListener("click", function (e) {
     e.stopPropagation();
+    headerInput.focus();
     headerForm.classList.add("active");
   });
   headerFormClear.addEventListener("click", function (e) {

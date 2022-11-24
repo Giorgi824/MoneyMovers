@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MM</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <script src="js/tiny-slider.js" defer></script>
     <script src="js/svges.js" defer></script>
     <script src="js/lazy.js" defer></script>
     <script src="js/add-svg.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/mode.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/tiny-slider.css" />
     <link rel="stylesheet" href="css/main.scss/main.css" />
@@ -25,21 +25,24 @@
             <span>My Profile </span>
           </a>
           <ul>
-            <li><a href="#">მთავარი</a></li>
-            <li><a href="#">ჩემი გვერდი</a></li>
-            <li><a href="#">ფინანსები</a></li>
-            <li><a href="#">ვიჯეტები</a></li>
-            <li><a href="#">ინფორმაცია</a></li>
-            <li><a href="#">სერვის ცენტრი</a></li>
-            <li><a href="#">კონფიგურაცია</a></li>
-            <li><a href="#">გამოსვლა</a></li>
+            <li><a href="#" data-svg="homeSvg">მთავარი</a></li>
+            <li><a href="#" data-svg="profileSvg">ჩემი გვერდი</a></li>
+            <li><a href="#" data-svg="financeSvg">ფინანსები</a></li>
+            <li><a href="#" data-svg="vigetSvg">ვიჯეტები</a></li>
+            <li><a href="#" data-svg="infoSvg">ინფორმაცია</a></li>
+            <li><a href="#" data-svg="pinSvg">სერვის ცენტრი</a></li>
+            <li><a href="#" data-svg="settingSvg">კონფიგურაცია</a></li>
+            <li><a href="#" data-svg="logoutSvg">გამოსვლა</a></li>
           </ul>
           <div>
             <small>დასათაურება</small>
             <ul>
-              <li><a href="#">ჩათი</a><span class="total-chats">4</span></li>
               <li>
-                <a href="#">შეტყობინება</a
+                <a href="#" data-svg="chatSvg">ჩათი</a
+                ><span class="total-chats">4</span>
+              </li>
+              <li>
+                <a href="#" data-svg="bellSvg">შეტყობინება</a
                 ><span class="total-notifications">9</span>
               </li>
             </ul>
@@ -47,10 +50,20 @@
         </div>
         <div class="dark-light-mode">
           <div>
-            <button class="light" role="mode switch" arial-label="light mode">
+            <button
+              class="light"
+              role="mode switch"
+              arial-label="light mode"
+              data-svg="sunSvg"
+            >
               ღია
             </button>
-            <button class="dark" role="mode switch" arial-label="dark mode">
+            <button
+              class="dark"
+              role="mode switch"
+              arial-label="dark mode"
+              data-svg="moonSvg"
+            >
               მუქი
             </button>
           </div>
@@ -60,9 +73,9 @@
         <header>
           <div>
             <form>
-              <span class="search-svg"></span>
+              <span class="search-svg" data-svg="searchSvg"></span>
               <input type="text" placeholder="ძიება" />
-              <span class="search-exit"></span>
+              <span class="search-exit" data-svg="exitSvg"></span>
             </form>
             <div class="user-lang">
               <div class="user static-el">
@@ -74,19 +87,29 @@
                     <small>ფიზიკური პირი</small>
                     <span>გიორგი გვარაშვილი</span>
                   </div>
-                  <span class="user-arrow arrow-icon arrow-icon-down"></span>
+                  <span
+                    class="user-arrow arrow-icon arrow-icon-down"
+                    data-svg="arrowSvg"
+                  ></span>
                 </div>
                 <ul class="user-drop drop-el">
                   <li>
-                    <a href="#"><small></small><span>ჩემი პროფილი</span></a>
-                  </li>
-                  <li>
                     <a href="#"
-                      ><small></small><span>პროფილის რედაქტირება</span></a
+                      ><small data-svg="profileSvg"></small
+                      ><span>ჩემი პროფილი</span></a
                     >
                   </li>
                   <li>
-                    <a href="#"><small></small><span>გამოსვლა</span></a>
+                    <a href="#"
+                      ><small data-svg="editSvg"></small
+                      ><span>პროფილის რედაქტირება</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><small data-svg="logoutSvg"></small
+                      ><span>გამოსვლა</span></a
+                    >
                   </li>
                 </ul>
               </div>
@@ -96,7 +119,10 @@
                     ><img data-src="img/symbol.png" alt="language symbol"
                   /></span>
                   <small>ქარ</small>
-                  <span class="lang-arrow arrow-icon arrow-icon-down"></span>
+                  <span
+                    class="lang-arrow arrow-icon arrow-icon-down"
+                    data-svg="arrowSvg"
+                  ></span>
                 </div>
                 <ul class="language-drop drop-el">
                   <li>
@@ -152,29 +178,32 @@
                     </div>
                   </div>
                   <button class="btn-icon">
-                    <span class="plus-icon"></span>შევსება
+                    <span class="plus-icon" data-svg="plusSvg"></span>შევსება
                   </button>
                 </div>
                 <div class="account-num">
-                  <span class="account-svg squar-el walletSvg"></span>
+                  <span
+                    class="account-svg squar-el"
+                    data-svg="walletSvg"
+                  ></span>
                   <div>
                     <span>ანგარიშის ნომერი</span>
                     <div class="acc-nm">GE29NB0000000101904917</div>
                   </div>
-                  <button class="copy-svg"></button>
+                  <button class="copy-svg" data-svg="copySvg"></button>
                 </div>
               </div>
               <div class="payment-methods">
                 <button>
-                  <span class="squar-el phoneSvg"></span
+                  <span class="squar-el" data-svg="phoneSvg"></span
                   ><small>მობ.შევსება</small>
                 </button>
                 <button class="red-dot">
-                  <span class="squar-el walletSvg"></span
+                  <span class="squar-el" data-svg="walletSvg"></span
                   ><small>მობ.შევსება</small>
                 </button>
                 <button>
-                  <span class="squar-el reloadSvg"></span
+                  <span class="squar-el" data-svg="reloadSvg"></span
                   ><small>მობ.შევსება</small>
                 </button>
               </div>
@@ -184,10 +213,10 @@
                 <h3>ვიჯეტები</h3>
                 <div class="slider-arrows">
                   <button class="btn-icon left-slide">
-                    <span class="arrow-icon"></span>
+                    <span class="arrow-icon" data-svg="arrowSvg"></span>
                   </button>
                   <button class="btn-icon right-slide">
-                    <span class="arrow-icon"></span>
+                    <span class="arrow-icon" data-svg="arrowSvg"></span>
                   </button>
                 </div>
               </div>
@@ -199,7 +228,8 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >ამანათები <span class="squar-el infoSvg"></span
+                        >ამანათები
+                        <span class="squar-el" data-svg="infoSvg"></span
                       ></a>
                       <div><span>14</span><small>ამანათები</small></div>
                       <span class="red">live</span>
@@ -213,7 +243,10 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >სერვისები<span class="squar-el infoSvg"></span
+                        >სერვისები<span
+                          class="squar-el"
+                          data-svg="infoSvg"
+                        ></span
                       ></a>
                       <div><span>17</span><small>სერვისები</small></div>
                       <span class="blue">24 ფასიანი</span>
@@ -227,7 +260,10 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >ფინანსები<span class="squar-el infoSvg"></span
+                        >ფინანსები<span
+                          class="squar-el"
+                          data-svg="infoSvg"
+                        ></span
                       ></a>
                       <div>
                         <span>14.45 <small>₾</small></span
@@ -244,7 +280,8 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >ამანათები <span class="squar-el infoSvg"></span
+                        >ამანათები
+                        <span class="squar-el" data-svg="infoSvg"></span
                       ></a>
                       <div><span>14</span><small>ამანათები</small></div>
                       <span class="red">live</span>
@@ -258,7 +295,10 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >სერვისები<span class="squar-el infoSvg"></span
+                        >სერვისები<span
+                          class="squar-el"
+                          data-svg="infoSvg"
+                        ></span
                       ></a>
                       <div><span>17</span><small>სერვისები</small></div>
                       <span class="blue">24 ფასიანი</span>
@@ -272,7 +312,10 @@
                     /></span>
                     <div>
                       <a href="#"
-                        >ფინანსები<span class="squar-el infoSvg"></span
+                        >ფინანსები<span
+                          class="squar-el"
+                          data-svg="infoSvg"
+                        ></span
                       ></a>
                       <div>
                         <span>14.45 <small>₾</small></span
@@ -284,7 +327,7 @@
                 </div>
               </div>
               <button class="btn-icon">
-                ყველა ვიჯეტი<span class="arrow-icon"></span>
+                ყველა ვიჯეტი<span class="arrow-icon" data-svg="arrowSvg"></span>
               </button>
             </div>
           </div>
@@ -294,7 +337,7 @@
               <div class="tr-row">
                 <small class="tr-date">27 მაისი, 2022</small>
                 <div>
-                  <span class="tr-icon squar-el convertSvg"></span>
+                  <span class="tr-icon squar-el" data-svg="convertSvg"></span>
                   <div class="tr-info">
                     <div>კონვერტაცია</div>
                     <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს...</p>
@@ -302,7 +345,7 @@
                   <div class="tr-quant"><span>14.45</span><small>₾</small></div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el usersSvg"
+                  <span class="tr-icon squar-el" data-svg="usersSvg"
                     ><img data-src="img/user2.png" alt=""
                   /></span>
                   <div class="tr-info">
@@ -317,7 +360,7 @@
               <div class="tr-row">
                 <small class="tr-date">27 მაისი, 2022</small>
                 <div>
-                  <span class="tr-icon squar-el operationSvg"></span>
+                  <span class="tr-icon squar-el" data-svg="operationSvg"></span>
                   <div class="tr-info">
                     <div>საკომისიო ოპერაცია</div>
                     <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
@@ -325,7 +368,10 @@
                   <div class="tr-quant"><span>14.45</span><small>₾</small></div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <span
+                    class="tr-icon squar-el bulbSvg"
+                    data-svg="bulbSvg"
+                  ></span>
                   <div class="tr-info">
                     <div>კონვერტაცია გადახდა</div>
                     <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
@@ -338,7 +384,7 @@
               <div class="tr-row">
                 <small class="tr-date">27 მაისი, 2022</small>
                 <div>
-                  <span class="tr-icon squar-el operationSvg"></span>
+                  <span class="tr-icon squar-el" data-svg="operationSvg"></span>
                   <div class="tr-info">
                     <div>კონვერტაცია</div>
                     <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს ...</p>
@@ -346,7 +392,7 @@
                   <div class="tr-quant"><span>14.45</span><small>₾</small></div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el usersSvg"
+                  <span class="tr-icon squar-el" data-svg="usersSvg"
                     ><img data-src="img/user3.png" alt=""
                   /></span>
                   <div class="tr-info">
@@ -358,7 +404,10 @@
                   </div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <span
+                    class="tr-icon squar-el bulbSvg"
+                    data-svg="bulbSvg"
+                  ></span>
                   <div class="tr-info">
                     <div>კონვერტაცია გადახდა</div>
                     <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
@@ -371,7 +420,7 @@
               <div class="tr-row">
                 <small class="tr-date">27 მაისი, 2022</small>
                 <div>
-                  <span class="tr-icon squar-el operationSvg"></span>
+                  <span class="tr-icon squar-el" data-svg="operationSvg"></span>
                   <div class="tr-info">
                     <div>საკომისიო ოპერაცია</div>
                     <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
@@ -379,7 +428,10 @@
                   <div class="tr-quant"><span>14.45</span><small>₾</small></div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <span
+                    class="tr-icon squar-el bulbSvg"
+                    data-svg="bulbSvg"
+                  ></span>
                   <div class="tr-info">
                     <div>კონვერტაცია გადახდა</div>
                     <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
@@ -392,7 +444,7 @@
               <div class="tr-row">
                 <small class="tr-date">27 მაისი, 2022</small>
                 <div>
-                  <span class="tr-icon squar-el operationSvg"></span>
+                  <span class="tr-icon squar-el" data-svg="operationSvg"></span>
                   <div class="tr-info">
                     <div>საკომისიო ოპერაცია</div>
                     <p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად მკითხვე...</p>
@@ -400,7 +452,10 @@
                   <div class="tr-quant"><span>14.45</span><small>₾</small></div>
                 </div>
                 <div>
-                  <span class="tr-icon squar-el bulbSvg"></span>
+                  <span
+                    class="tr-icon squar-el bulbSvg"
+                    data-svg="bulbSvg"
+                  ></span>
                   <div class="tr-info">
                     <div>კონვერტაცია გადახდა</div>
                     <p>გავრცელებული მოსაზრებით, Lorem Ipsum შემთხვევი...</p>
@@ -412,7 +467,7 @@
               </div>
             </div>
             <button class="btn-icon">
-              ნახე მეტი <span class="arrow-icon"></span>
+              ნახე მეტი <span class="arrow-icon" data-svg="arrowSvg"></span>
             </button>
           </div>
         </div>
@@ -421,6 +476,6 @@
     <span class="copied"
       >copied to clipboard <input type="text" id="copied-input"
     /></span>
-    <button class="chat-fixed"><img data-src="img/chat.svg" alt="" /></button>
+    <button class="chat-fixed" data-svg="chatSvg"></button>
   </body>
 </html>

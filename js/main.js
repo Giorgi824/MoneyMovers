@@ -87,13 +87,11 @@ window.addEventListener("DOMContentLoaded", () => {
     responsive: {
       0: {
         items: 1,
-        nav: false,
       },
-      768: {
+      1380: {
         items: 2,
-        nav: true,
       },
-      1440: {
+      1720: {
         items: 3,
       },
     },
